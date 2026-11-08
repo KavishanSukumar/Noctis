@@ -1,0 +1,130 @@
+# ==============================================================================
+# Noctis - Security & Hygiene .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Security & Secrets (UNSAFE FILES)
+# ------------------------------------------------------------------------------
+# Environment variables and secrets
+.env
+.env.*
+*.env
+!.env.example
+!.env.template
+
+# Signing keys, certificates, keystores
+*.keystore
+*.jks
+*.p12
+*.p8
+*.key
+*.pem
+*.cer
+*.crt
+*.der
+*.pfx
+*.mobileprovision
+auth-key-*.p8
+
+# Cloud credentials and service tokens
+google-services.json
+GoogleService-Info.plist
+credentials.json
+client_secret*.json
+service-account*.json
+*id_rsa*
+*id_ed25519*
+
+# Package manager auth credentials
+.npmrc
+
+# ------------------------------------------------------------------------------
+# 2. Dependencies & Package Managers (USELESS FILES)
+# ------------------------------------------------------------------------------
+node_modules/
+.pnp
+.pnp.js
+
+# ------------------------------------------------------------------------------
+# 3. Expo & React Native Build / Cache
+# ------------------------------------------------------------------------------
+.expo/
+.expo-shared/
+web-build/
+.metro/
+metro-cache/
+
+# ------------------------------------------------------------------------------
+# 4. Native Android / iOS Build Artifacts
+# ------------------------------------------------------------------------------
+# Android
+android/app/build/
+android/.gradle/
+android/build/
+local.properties
+*.apk
+*.aab
+*.dex
+
+# iOS
+ios/build/
+ios/Pods/
+ios/*.xcworkspace/xcuserdata/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/project.xcworkspace/xcuserdata/
+DerivedData/
+
+# ------------------------------------------------------------------------------
+# 5. Logs, Diagnostics & Diagnostics Reports
+# ------------------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+coverage/
+.nyc_output/
+
+# ------------------------------------------------------------------------------
+# 6. Backups, Editor & Temp Files
+# ------------------------------------------------------------------------------
+*.bak
+*.backup
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+package.json.*.bak
+package.json.sdk52.bak
+
+# ------------------------------------------------------------------------------
+# 7. Operating System Artifacts
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------------------------
+# 8. IDE & Editor Specific Folders
+# ------------------------------------------------------------------------------
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace
+*.tsbuildinfo

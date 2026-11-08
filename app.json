@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "Noctis",
+    "slug": "noctis",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "noctis",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.noctis.vault",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Noctis uses Face ID to protect your zero-knowledge diary and second brain vault.",
+        "NSMicrophoneUsageDescription": "Allow Noctis to transcribe voice to-dos on device.",
+        "NSSpeechRecognitionUsageDescription": "Allow Noctis to transcribe voice commands on device."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B0B0E"
+      },
+      "package": "com.noctis.vault",
+      "versionCode": 1,
+      "allowBackup": false,
+      "softwareKeyboardLayoutMode": "resize",
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "RECORD_AUDIO",
+        "POST_NOTIFICATIONS",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#D4AF37"
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow Noctis to securely authenticate with Face ID."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#0B0B0E"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7a691c73-71eb-4fa3-a3cf-35acf4b5c46d"
+      }
+    }
+  }
+}
